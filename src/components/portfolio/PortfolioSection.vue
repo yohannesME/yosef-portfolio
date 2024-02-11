@@ -3,15 +3,20 @@
   <div class="portfolio">
     <div class="box-container">
       <div class="box" v-for="project in portfolio" :key="project.title">
-                <img :src="project.img" alt="">
-                <div class="content">
-                    <h3>{{project.title}}</h3>
-                    <span class="highlight">{{project.description}}</span><br>
-                    <span class="span">{{project.techStack.toString()}}</span>
-                    <a v-show="project.repo" :href="project.repo"><i class="fab fa-github"></i></a>
-                <a v-show="project.link" :href="project.link" ><i class="fas fa-link"></i></a>
-            </div>
+        <img :src="project.img" alt="" />
+        <div class="content">
+          <h3>{{ project.title }}</h3>
+          <span class="highlight">{{ project.description }}</span
+          ><br />
+          <span class="span">{{ project.techStack.toString() }}</span>
+          <a v-show="project.repo" :href="project.repo"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a v-show="project.link" :href="project.link" target="_blank"
+            ><i class="fas fa-link"></i
+          ></a>
         </div>
+      </div>
     </div>
     <a
       class="btn cv"
